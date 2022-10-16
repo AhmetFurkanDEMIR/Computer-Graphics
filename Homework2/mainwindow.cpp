@@ -169,7 +169,7 @@ void MainWindow::drawBresenham(){
 
         symmetryBresenham(x,y);
 
-        error1 = error + (2 * y + 1);
+        error1 = error + (2 + y + 1);
         error2 = error + (2 * y +1) - (2 * x - 1);
 
         if(fabs(error1)<fabs(error2)){
