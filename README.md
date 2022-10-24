@@ -7,3 +7,4 @@ This repo contains my Necmettin Erbakan University computer engineering computer
 * [x] [Homework1 - Line drawing algorithms](/Homework1/)
 * [x] [Homework2 - Circle drawing algorithms](/Homework2/)
 * [x] [Study - Draw Parabola](/Parabola/)
+* [x] [Study - Image Process](/ImageProcess/)
