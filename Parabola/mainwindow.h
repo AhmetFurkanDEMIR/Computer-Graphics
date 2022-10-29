@@ -25,17 +25,21 @@ private slots:
    void mousePressEvent(QMouseEvent*);
    void on_pushButton_clicked();
 
+   void on_actionFill_triggered();
+
 private:
     Ui::MainWindow *ui;
 
     // screen
     void __initScreen__();
     void drawDDA(QPoint first, QPoint end);
+    void fill(int x, int y, QRgb ground, QRgb new_color);
 
     QRgb color;
     QImage canvas;
 
     QList<QPoint> mouses;
+    QPoint mouse;
 
     QString description = "";
 

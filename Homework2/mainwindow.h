@@ -25,6 +25,7 @@ private slots:
    // algorithm check button
    void slot_SomethingChecked1();
    void slot_SomethingChecked2();
+   void slot_SomethingChecked3();
    void mousePressEvent(QMouseEvent*);
 
 private:
@@ -34,6 +35,7 @@ private:
     void addCheckBox();
     QPointer<QAction> m_p_Act_Button1;
     QPointer<QAction> m_p_Act_Button2;
+    QPointer<QAction> m_p_Act_Button3;
 
 
     // screen
@@ -42,6 +44,8 @@ private:
     void drawBresenham();
     void symmetry(int x, int y);
     void symmetryBresenham(int x, int y);
+
+    void fill(int x, int y, QRgb ground, QRgb new_color);
 
     int algorithm = 0;
 

@@ -33,6 +33,8 @@ MainWindow::~MainWindow()
 void MainWindow::mousePressEvent(QMouseEvent *event)
 {
 
+    mouse = event->pos();
+
     mouses.append(event->pos());
 
     description = "(X: "+QString::number(event->pos().x())+", Y: "+QString::number(event->pos().y())+")";
@@ -91,4 +93,27 @@ void MainWindow::drawDDA(QPoint first, QPoint end){
         ui->label->setPixmap(QPixmap::fromImage(canvas));
     }
 
+}
+
+void MainWindow::fill(int x, int y, QRgb ground, QRgb new_color){
+
+    QApplication::processEvents();
+
+    if(canvas.pixel(x,y)!=ground){
+
+        canvas.setPixel(x,y,new_color);
+        ui->label->setPixmap(QPixmap::fromImage(canvas));
+
+        fill(x+1, y, ground, new_color);
+        fill(x-1, y, ground, new_color);
+        fill(x, y+1, ground, new_color);
+        fill(x, y-1, ground, new_color);
+    }
+
+}
+
+void MainWindow::on_actionFill_triggered()
+{
+    mouses.clear();
+    fill(mouse.x(),mouse.y(), color, color);
 }

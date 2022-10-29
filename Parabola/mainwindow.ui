@@ -78,8 +78,20 @@
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuFill">
+    <property name="title">
+     <string>Fill</string>
+    </property>
+    <addaction name="actionFill"/>
+   </widget>
+   <addaction name="menuFill"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionFill">
+   <property name="text">
+    <string>Fill</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

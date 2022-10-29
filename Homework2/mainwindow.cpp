@@ -45,6 +45,15 @@ void MainWindow::slot_SomethingChecked2(){
 
 }
 
+void MainWindow::slot_SomethingChecked3()
+{
+
+    m_p_Act_Button3->setChecked(false);
+
+    fill(mouse.x(),mouse.y(), color, color);
+
+}
+
 
 void MainWindow::addCheckBox(){
 
@@ -58,10 +67,16 @@ void MainWindow::addCheckBox(){
     m_p_Act_Button2->setChecked(false);
     connect(m_p_Act_Button2, SIGNAL(triggered()), this, SLOT(slot_SomethingChecked2()));
 
+    m_p_Act_Button3 = new QAction("Fill", this);
+    m_p_Act_Button3->setCheckable(true);
+    m_p_Act_Button3->setChecked(false);
+    connect(m_p_Act_Button3, SIGNAL(triggered()), this, SLOT(slot_SomethingChecked3()));
+
+
     QMenu *p_menu = menuBar()->addMenu("Algorithms");
     p_menu->addAction(m_p_Act_Button1);
     p_menu->addAction(m_p_Act_Button2);
-
+    p_menu->addAction(m_p_Act_Button3);
 }
 
 
@@ -169,7 +184,7 @@ void MainWindow::drawBresenham(){
 
         symmetryBresenham(x,y);
 
-        error1 = error + (2 + y + 1);
+        error1 = error + (2 * y + 1);
         error2 = error + (2 * y +1) - (2 * x - 1);
 
         if(fabs(error1)<fabs(error2)){
@@ -189,4 +204,20 @@ void MainWindow::drawBresenham(){
 
 }
 
+void MainWindow::fill(int x, int y, QRgb ground, QRgb new_color){
+
+    QApplication::processEvents();
+
+    if(canvas.pixel(x,y)!=ground){
+
+        canvas.setPixel(x,y,new_color);
+        ui->label->setPixmap(QPixmap::fromImage(canvas));
+
+        fill(x+1, y, ground, new_color);
+        fill(x-1, y, ground, new_color);
+        fill(x, y+1, ground, new_color);
+        fill(x, y-1, ground, new_color);
+    }
+
+}
 
