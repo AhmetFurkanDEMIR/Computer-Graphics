@@ -1,0 +1,44 @@
+<RCC>
+    <qresource prefix="/icon"/>
+    <qresource prefix="/gameCharacter">
+        <file>Images/Character/standing.png</file>
+        <file>Images/Character/R9.png</file>
+        <file>Images/Character/R8.png</file>
+        <file>Images/Character/R7.png</file>
+        <file>Images/Character/R6.png</file>
+        <file>Images/Character/R5.png</file>
+        <file>Images/Character/R4.png</file>
+        <file>Images/Character/R3.png</file>
+        <file>Images/Character/R2.png</file>
+        <file>Images/Character/R1.png</file>
+        <file>Images/Character/L9.png</file>
+        <file>Images/Character/L8.png</file>
+        <file>Images/Character/L7.png</file>
+        <file>Images/Character/L6.png</file>
+        <file>Images/Character/L5.png</file>
+        <file>Images/Character/L4.png</file>
+        <file>Images/Character/L3.png</file>
+        <file>Images/Character/L2.png</file>
+        <file>Images/Character/L1.png</file>
+        <file>Images/Character/prenses.png</file>
+        <file>Images/Character/mainDead.png</file>
+        <file>Images/Character/mainDeadCr.png</file>
+    </qresource>
+    <qresource prefix="/gameBackground">
+        <file>Images/GameBackground/0.png</file>
+        <file>Images/GameBackground/objBack.png</file>
+        <file>Images/GameBackground/Fire.png</file>
+        <file>Images/GameBackground/dead.png</file>
+        <file>Images/GameBackground/deadCr.png</file>
+    </qresource>
+    <qresource prefix="/enemy">
+        <file>Images/Enemy/R5.png</file>
+        <file>Images/Enemy/R4.png</file>
+        <file>Images/Enemy/R3.png</file>
+        <file>Images/Enemy/R2.png</file>
+        <file>Images/Enemy/R1.png</file>
+        <file>Images/Enemy/R8.png</file>
+        <file>Images/Enemy/R7.png</file>
+        <file>Images/Enemy/R6.png</file>
+    </qresource>
+</RCC>
